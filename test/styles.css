@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+  }
+  .stars{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: whitesmoke;
+    
+  }
+  .star1{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+  }
+  .star2{
+    position: absolute;
+    top: 85%;
+    left: 10%;
+  }
+  .star3{
+    position: absolute;
+    top: 70%;
+    left: 93%;
+  }
+  .star4{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+  }
+  .sun {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+
+  }
+  
+  .earth-orbit {
+    width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border-top: 3px solid rgba(255, 255, 255, 0.5);
+  border-left: rgba(255, 255, 255, 0.3) 2px solid;
+  border-bottom: rgba(255, 255, 255, 0.1) 1px solid;
+  border-right: #000 1px solid;
+  position: absolute;
+  animation: rotate 36.5s linear infinite;
+  }
+  
+  .earth {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 18%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .moon-orbit{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    border-top: 3px solid rgba(255, 255, 255, 0.5);
+    border-left: rgba(255, 255, 255, 0.3) 2px solid;
+    border-bottom: rgba(255, 255, 255, 0.1) 1px solid;
+    border-right: #000 1px solid;
+    position: absolute;
+    animation: rotate 1.85s linear infinite;
+  }
+  .moon{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

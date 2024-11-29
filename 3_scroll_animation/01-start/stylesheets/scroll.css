@@ -1,0 +1,32 @@
+
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  /* transform: rotateZ(-2deg); */
+  max-width: 600px;
+  width: 90%;
+  transition: all 2s ease-out;
+  
+}
+.inline-photo:hover{
+  transform: rotateZ(-2deg) scale(1.1);
+  transition: all .5s ease-out;
+  
+}
+
+
+.show-on-scroll{
+  transform: translateX(-5em);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+.is-visible{
+  transform: translatex(1em);
+  opacity: 1;
+  transition: all 2s ease-out;
+
+}

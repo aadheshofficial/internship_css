@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Hero Header: Level Up your CSS Animation</title>
+    <!-- The default layout, resets and and text styling -->
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <!-- Custom styling for the header -->
+    <link href="stylesheets/header.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <section class="header-content">
+        <img src="images/rocky-dashed.svg" class="rocky-dashed animation-pop-in">
+        <h1 class="header-title animation-pop-in">Your awesome landing page</h1>
+        <h3 class="header-subtitle animation-pop-in">A useful start for your projects</h3>
+        <p class="header-button animation-pop-in"><a href="#calls-to-action" class="button">Get started today</a></p>
+      </section>
+      <section class="header-down-arrow">
+        <img src="images/downarrow.png" width="50"/>
+      </section>
+    </header>
+    <script>
+      document.body.className += "loading"
+      window.addEventListener("load",()=>{
+        document.body.className = document.body.className.replace("loading","")
+      },false)
+    </script>
+  </body>
+</html>

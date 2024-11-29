@@ -1,0 +1,58 @@
+a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block; 
+    transition: color .3s cubic-bezier(.85,.98,.34,.99);
+}
+
+a::after {
+    border-top: .1em solid blue;
+    border-radius: 1em;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: .2em; 
+    transition: right .3s cubic-bezier(.85,.98,.34,.99),
+        border-color .3s cubic-bezier(.85,.98,.34,.99);
+    /* animation: slide-left 1s cubic-bezier(.85,.98,.34,.99) forwards; */
+}
+
+a:hover{
+    text-decoration: none;
+    color:rgb(72, 128, 147);
+    transition: color .3s cubic-bezier(.85,.98,.34,.99);
+    
+    /* animation: change-color .3s cubic-bezier(.85,.98,.34,.99) forwards; */
+
+}
+a:hover::after{
+    /* animation: slide-right 1s cubic-bezier(.85,.98,.34,.99) forwards, */
+        /* change-color .3s cubic-bezier(.85,.98,.34,.99) forwards; */
+    right :0;
+    border-color:rgb(72, 128, 147);
+    transition: right .3s cubic-bezier(.85,.98,.34,.99),
+        border-color .3s cubic-bezier(.85,.98,.34,.99);
+
+}
+
+
+
+@keyframes change-color {
+    100%{
+        color:rgb(72, 128, 147);
+        /* border-color: aquamarine; */
+    }
+}
+
+@keyframes slide-right {
+    100%{
+        right:0
+    }
+}
+
+@keyframes slide-left {
+    100%{
+        right:100%
+    }
+}

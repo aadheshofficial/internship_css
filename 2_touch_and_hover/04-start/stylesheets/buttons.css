@@ -1,0 +1,55 @@
+/* Styles for the buttons*/
+
+.button {
+    background: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.button::before{
+    background: rgba(200,200,200,0.8);
+    border-radius: .25em;
+    content: "";
+    position: absolute;
+        top: .5em;
+        left: .1em;
+        right:-.1em;
+        bottom: -.1em;
+    z-index: -1 ;
+}
+.button::after{
+    background: greenyellow;
+    border-radius: .25em;
+    content: "";
+    position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    z-index: -1;
+}
+.button:hover{
+    text-decoration: none;
+    transform: scale(1.1);
+    /* z-index: 1; */
+}
+.button:hover::before{
+    transform: translateY(.2em);
+}
+
+.button:hover::after{
+    background-color: green;
+}
+
+.button:active{
+    transform: translateY(.2em);
+}
+.button:active::before{
+    transform: translateY(-.2em) translateX(-.1em) ;
+}
+
+.button,
+.button::before,
+.button::after{
+    transition: all 0.3s ease-out;
+}
